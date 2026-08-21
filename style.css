@@ -1,0 +1,62 @@
+:root {
+    --primaria: #B86F6B;
+    --primaria-escura: #9E5A57;
+    --primaria-clara: #D9A29D;
+
+    --fundo: #F9F6F3;
+    --branco: #FFFFFF;
+    --bege-claro: #F5EFEB;
+
+    --texto: #3D3532;
+    --texto-secundario: #756B67;
+    --texto-claro: #9A8E89;
+
+    --borda: #E7DDD8;
+    --borda-clara: #EFE7E3;
+
+    --sucesso: #8FAF8B;
+    --aviso: #D9A56B;
+    --erro: #B86F6B;
+    --informacao: #9A8177;
+
+    --icone: #A87569;
+    --sombra: rgba(120, 90, 80, 0.10);
+
+    --raio-pequeno: 6px;
+    --raio-medio: 10px;
+    --raio-grande: 16px;
+
+    --sombra-card: 0 2px 10px var(--sombra);
+}
+
+body{
+    background-color: var(--fundo);
+    font-family: Arial, sans-serif;
+    color: #f396c0;
+    width: 100%;    
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    display: flex;
+    flex-direction: column; 
+    width: 9%;
+    gap: .5rem;
+    position: relative;
+    height: 100%;
+    padding: 0 15px ;
+}
+h1{
+    font-size: large;
+}
+.sair{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.menu{
+    border-radius: 5px;
+    border: none;
+     background-color: var(--primaria);
+}
