@@ -1,10 +1,14 @@
+
 :root {
+
     --primaria: #B86F6B;
     --primaria-escura: #9E5A57;
     --primaria-clara: #D9A29D;
 
     --fundo: #f0d7ea;
+
     --branco: #FFFFFF;
+
     --bege-claro: #F5EFEB;
 
     --texto: #3D3532;
@@ -17,107 +21,696 @@
     --sucesso: #8FAF8B;
     --aviso: #D9A56B;
     --erro: #B86F6B;
-    --informacao: #9A8177;
-
     --icone: #A87569;
+
     --sombra: rgba(120, 90, 80, 0.10);
 
     --raio-pequeno: 6px;
     --raio-medio: 10px;
     --raio-grande: 16px;
 
-    --sombra-card: 0 2px 10px var(--sombra);
+    --sombra-card:
+        0 2px 10px var(--sombra);
 }
 
-body{
-    background-color: var(--fundo);
-    font-family: Arial, sans-serif;
-    color: #eda2c4;
-    width: 100%;    
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    
-}
-nav{
 
-    display: flex;
-    flex-direction: column; 
-    width: 11%;
-    gap: .5rem;
-    position: relative;
-    height: 100%;
-    padding: 0 15px ;
-}
-h1{
-    font-size: large;
-    text-align: center;
-    margin-bottom: 10px;
+/* =========================
+    GERAL
+========================= */
 
-}
-.sair{
-    position: absolute;
-    bottom: 10px;
-    width: 50%;
-}
-/* menuprincipal */
-.menu{
-
-    border-radius: 5px;
-    border: none;
-    background-color: var(--primaria);
-    padding: 12px;
-    text-align: left;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    color: #5f5552;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-/* iconis do botao */
-.menu i{
-    font-size: 20px;
-}
-/* passando o mouse em cima do botão */
-.menu:hover{
-    background-color:white ;
-    color:#9E5A57
-     
-}
-
-main{
-    margin-left: 230px;
-    min-height: 100vh;
-}
-.cabecalho{
-    height: 80px;
-    background-color: #B86F6B;
-    border-bottom: 1px solid #eee3df;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
+* {
     box-sizing: border-box;
-    padding-left: 50%;
+}
+
+
+body {
+
+    margin: 0;
+
+    padding: 0;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--fundo);
+
+    color: var(--texto);
+
+}
+
+
+/* =========================
+   MENU LATERAL
+========================= */
+
+nav {
+
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 230px;
+
+    height: 100vh;
+
+    padding: 20px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    background-color: var(--bege-claro);
+
+    box-shadow: var(--sombra-card);
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo-area {
+
+    text-align: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+.logo {
+
+    width: 125px;
+
+    height: 125px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 5px;
+
+}
+
+
+.logo-area h1 {
+
+    margin: 0;
+
+    font-size: 17px;
+
+    color: var(--primaria-escura);
+
+}
+
+
+/* =========================
+   BOTÕES DO MENU
+========================= */
+
+.menu {
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+
+    border-radius: var(--raio-medio);
+
+    background-color: transparent;
+
+    color: var(--texto);
+
+    font-size: 15px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.menu i {
+
+    font-size: 21px;
+
+    color: var(--icone);
+
+}
+
+
+/* PASSAR O MOUSE */
+
+.menu:hover {
+
+    background-color: var(--primaria);
+
+    color: var(--branco);
+
+}
+
+
+.menu:hover i {
+
+    color: var(--branco);
+
+}
+
+
+/* MENU ATIVO */
+
+.menu.ativo {
+
+    background-color: var(--primaria);
+
+    color: var(--branco);
+
+}
+
+
+.menu.ativo i {
+
+    color: var(--branco);
+
+}
+
+
+/* =========================
+   BOTÃO SAIR
+========================= */
+
+.sair {
+
+    position: absolute;
+
+    bottom: 15px;
+
+    left: 15px;
+
+    width: calc(100% - 30px);
+
+    color: var(--erro);
+
+}
+
+
+.sair i {
+
+    color: var(--erro);
+
+}
+
+
+.sair:hover {
+
+    background-color: var(--erro);
+
+    color: var(--branco);
+
+}
+
+
+.sair:hover i {
+
+    color: var(--branco);
+
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+main {
+
+    margin-left: 230px;
+
+    padding: 25px;
+
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    margin-bottom: 25px;
+
+    background-color: var(--branco);
+
+    border-radius: var(--raio-medio);
+
+    box-shadow: var(--sombra-card);
+
+}
+
+
+/* TÍTULO */
+
+.titulo h2 {
+
+    margin: 0;
+
+    font-size: 25px;
+
+    color: var(--primaria-escura);
+
+}
+
+
+.titulo p {
+
+    margin: 5px 0 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 14px;
+
+}
+
+
+/* =========================
+   USUÁRIO
+========================= */
+
+.usuario {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.usuario > i {
+
+    font-size: 40px;
+
+    color: var(--primaria);
+
+}
+
+
+.usuario strong {
+
+    display: block;
+
+    font-size: 14px;
+
+}
+
+
+.usuario span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    color: var(--texto-secundario);
+
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+
+    min-height: 280px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 30px;
+
+    margin-bottom: 25px;
+
+    background-color: var(--branco);
+
+    border-radius: var(--raio-grande);
+
+    box-shadow: var(--sombra-card);
+
+    overflow: hidden;
+
+}
+
+
+/* TEXTO */
+
+.texto-banner {
+
     width: 50%;
 
 }
-.cabecalho h2{
-    margin: 0;
-    font-size: 20px;
-    font-weight: 500;
-    color: #3D3532;
-}
-.cabecalho p{
-    margin: 5px 0 0;
-    font-size: 13px;
-    color: #8a7771;
+
+
+.texto-banner h2 {
+
+    margin: 0 0 10px;
+
+    font-size: 34px;
+
+    color: var(--primaria-escura);
 
 }
-.usoario{
+
+
+.texto-banner p {
+
+    margin: 0;
+
+    max-width: 450px;
+
+    color: var(--texto-secundario);
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   IMAGEM DO SPA
+========================= */
+
+.imagem-spa {
+
+    width: 45%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: var(--raio-grande);
+
+}
+
+
+/* =========================
+   BOTÃO AGENDAR
+========================= */
+
+.botao-agendar {
+
+    margin-top: 20px;
+
+    padding: 12px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    border: none;
+
+    border-radius: var(--raio-medio);
+
+    background-color: var(--primaria);
+
+    color: var(--branco);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.botao-agendar:hover {
+
+    background-color: var(--primaria-escura);
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* CARD */
+
+.card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background-color: var(--branco);
+
+    border-radius: var(--raio-medio);
+
+    box-shadow: var(--sombra-card);
+
+    transition: 0.3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+/* ÍCONE DO CARD */
+
+.icone-card {
+
+    width: 50px;
+
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: var(--raio-medio);
+
+    background-color: var(--bege-claro);
+
+}
+
+
+.icone-card i {
+
+    font-size: 25px;
+
+    color: var(--icone);
+
+}
+
+
+/* TEXTO DO CARD */
+
+.card h3 {
+
+    margin: 0 0 5px;
+
+    font-size: 14px;
+
+    color: var(--texto-secundario);
+
+}
+
+
+.card strong {
+
+    font-size: 23px;
+
+    color: var(--primaria-escura);
+
+}
+
+
+.card p {
+
+    margin: 3px 0 0;
+
+    font-size: 12px;
+
+    color: var(--texto-claro);
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+
+        width: 190px;
+
+    }
+
+    main {
+
+        margin-left: 190px;
+
+    }
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    nav {
+
+        width: 70px;
+
+        padding: 15px 10px;
+
+    }
+
+
+    .logo {
+
+        width: 45px;
+
+        height: 45px;
+
+    }
+
+
+    .logo-area h1 {
+
+        display: none;
+
+    }
+
+
+    .menu span {
+
+        display: none;
+
+    }
+
+
+    .menu {
+
+        justify-content: center;
+
+        padding: 12px;
+
+    }
+
+
+    main {
+
+        margin-left: 70px;
+
+        padding: 15px;
+
+    }
+
+
+    .cabecalho {
+
+        padding: 15px;
+
+    }
+
+
+    .banner {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .texto-banner {
+
+        width: 100%;
+
+    }
+
+
+    .imagem-spa {
+
+        width: 100%;
+
+        height: 200px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
 
 }
 

@@ -1,46 +1,273 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SPA Bem Estar</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-     <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <title>SPA</title>
+
+    <!-- Ícones Phosphor -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    >
+
 </head>
+
 <body>
+
+    <!-- =========================
+         MENU LATERAL
+    ========================== -->
+
     <nav>
-<h1>SPA BEM ESTAR</h1>
-        <img src="logo.png" alt="">
-        <button class="menu">
-            <i class="ph ph-house"></i> Dashboard
+
+        <!-- LOGO -->
+        <div class="logo-area">
+
+            <img
+                src="logo.png"
+                alt="Logo SPA Bem Estar"
+                class="logo"
+            >
+
+            <h1>SPA BEM ESTAR</h1>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <button class="menu ativo">
+            <i class="ph ph-house"></i>
+            <span>Dashboard</span>
         </button>
+
+
         <button class="menu">
-            <i class="ph ph-calendar"></i> Agendamento
+            <i class="ph ph-calendar"></i>
+            <span>Agendamentos</span>
         </button>
+
+
         <button class="menu">
-            <i class="ph ph-users"></i> clientes
+            <i class="ph ph-users"></i>
+            <span>Clientes</span>
         </button>
+
+
         <button class="menu">
-            <i class="ph ph-person-simple"></i> Produtos
+            <i class="ph ph-package"></i>
+            <span>Produtos</span>
         </button>
+
+
         <button class="menu">
-            <i class="ph ph-user"></i> Funcionarios
+            <i class="ph ph-user"></i>
+            <span>Funcionários</span>
         </button>
+
+
         <button class="menu">
-            <i class="ph ph-money"></i> Pagamentos
+            <i class="ph ph-money"></i>
+            <span>Pagamentos</span>
         </button>
+
+
+        <!-- SAIR -->
+
         <button class="menu sair">
-            <i class="ph ph-sign-out"></i> Sair
+            <i class="ph ph-sign-out"></i>
+            <span>Sair</span>
         </button>
+
     </nav>
+
+
+    <!-- =========================
+         PAGINA PRINCIPAL
+    ========================== -->
+
     <main>
+
+
+        <!-- CABEÇALHO -->
+
         <header class="cabecalho">
-        cabeçalho
+
+            <div class="titulo">
+
+                <h2>Dashboard</h2>
+
+                <p>
+                    Bem-vinda ao SPA Bem Estar
+                </p>
+
+            </div>
+
+
+            <!-- USUÁRIO -->
+
+            <div class="usuario">
+
+                <i class="ph ph-user-circle"></i>
+
+                <div>
+
+                    <strong>Administrador</strong>
+
+                    <span>Bem-vinda!</span>
+
+                </div>
+
+            </div>
+
         </header>
+
+
+        <!-- =========================
+             BANNER
+        ========================== -->
+
+        <section class="banner">
+
+
+            <div class="texto-banner">
+
+                <h2>
+                    Bem-estar
+                </h2>
+
+                <p>
+                    Cuidado e qualidade em cada atendimento.
+                </p>
+
+
+                <button class="botao-agendar">
+
+                    <i class="ph ph-calendar-plus"></i>
+
+                    Agendar atendimento
+
+                </button>
+
+            </div>
+
+
+            <!-- IMAGEM -->
+
+            <img
+                src="spa.png"
+                alt="Ambiente relaxante do SPA"
+                class="imagem-spa"
+            >
+
+        </section>
+
+
+        <!-- =========================
+             CARDS
+        ========================== -->
+
+        <section class="cards">
+
+
+            <!-- AGENDAMENTOS -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    <i class="ph ph-calendar"></i>
+                </div>
+
+                <div>
+
+                    <h3>Agendamentos</h3>
+
+                    <strong>12</strong>
+
+                    <p>Hoje</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CLIENTES -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    <i class="ph ph-users"></i>
+                </div>
+
+                <div>
+
+                    <h3>Clientes</h3>
+
+                    <strong>48</strong>
+
+                    <p>Cadastrados</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SERVIÇOS -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    <i class="ph ph-sparkle"></i>
+                </div>
+
+                <div>
+
+                    <h3>Serviços</h3>
+
+                    <strong>15</strong>
+
+                    <p>Disponíveis</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PAGAMENTOS -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    <i class="ph ph-money"></i>
+                </div>
+
+                <div>
+
+                    <h3>Pagamentos</h3>
+
+                    <strong>R$ 2.450</strong>
+
+                    <p>Este mês</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
     </main>
+
 </body>
+
 </html>
+```
