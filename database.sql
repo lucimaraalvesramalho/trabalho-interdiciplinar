@@ -100,7 +100,7 @@ INSERT INTO servicos (nome, descricao, valor, duracao) VALUES
 ('Drenagem Linfática','massagem','150.00','60'),
 ('Spa Pés e Mãos','cuidados','100.00','60'),
 ('Aromaterapia','cuidados','80.00','30');
-
+( 'Dsigne de sobrancelh', '90.00','30')
 INSERT INTO agendamentos
 (id_cliente, id_funcionario, id_servico, data, hora, status) VALUES
 (1, 1, 1, '2026-08-15', '09:00:00', 'Agendado'),
