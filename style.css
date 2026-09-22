@@ -1,56 +1,67 @@
 
+/* ==================================================
+   VARIÁVEIS DO SISTEMA
+   ================================================== */
+
 :root {
 
+    /* CORES PRINCIPAIS */
     --primaria: #B86F6B;
     --primaria-escura: #9E5A57;
-    --primaria-clara: #D9A29D;
+    --primaria-clara: #d3a09b;
 
-    --fundo: #f0d7ea;
-
+    /* CORES DE FUNDO */
+    --fundo: #c4928e;
     --branco: #FFFFFF;
+    --bege-claro: #f7eee9;
 
-    --bege-claro: #F5EFEB;
-
+    /* CORES DOS TEXTOS */
     --texto: #3D3532;
     --texto-secundario: #756B67;
     --texto-claro: #9A8E89;
 
+    /* CORES DAS BORDAS */
     --borda: #E7DDD8;
     --borda-clara: #EFE7E3;
 
+    /* CORES DE STATUS */
     --sucesso: #8FAF8B;
     --aviso: #D9A56B;
     --erro: #B86F6B;
+
+    /* COR DOS ÍCONES */
     --icone: #A87569;
 
+    /* SOMBRA */
     --sombra: rgba(120, 90, 80, 0.10);
 
+    /* ARREDONDAMENTO */
     --raio-pequeno: 6px;
     --raio-medio: 10px;
     --raio-grande: 16px;
 
-    --sombra-card:
-        0 2px 10px var(--sombra);
+    /* SOMBRA DOS CARDS */
+    --sombra-card: 0 2px 10px var(--sombra);
 }
 
 
-/* =========================
-    GERAL
-========================= */
+/* ==================================================
+   CONFIGURAÇÃO GERAL
+   ================================================== */
 
+/* Faz o tamanho dos elementos ficar mais fácil de controlar */
 * {
     box-sizing: border-box;
 }
 
 
+/* Corpo da página */
 body {
 
     margin: 0;
-
     padding: 0;
 
     width: 100%;
-
     min-height: 100vh;
 
     font-family: Arial, sans-serif;
@@ -58,30 +69,28 @@ body {
     background-color: var(--fundo);
 
     color: var(--texto);
-
 }
 
 
-/* =========================
+/* ==================================================
    MENU LATERAL
-========================= */
+   ================================================== */
 
 nav {
 
+    /* Fixa o menu na tela */
     position: fixed;
 
     left: 0;
-
     top: 0;
 
     width: 230px;
-
     height: 100vh;
 
     padding: 20px 15px;
 
+    /* Coloca os itens um embaixo do outro */
     display: flex;
-
     flex-direction: column;
 
     gap: 8px;
@@ -89,38 +98,36 @@ nav {
     background-color: var(--bege-claro);
 
     box-shadow: var(--sombra-card);
-
 }
 
 
-/* =========================
+/* ==================================================
    LOGO
-========================= */
+   ================================================== */
 
 .logo-area {
 
     text-align: center;
 
     margin-bottom: 20px;
-
 }
 
 
+/* Imagem da logo */
 .logo {
 
-    width: 125px;
-
-    height: 125px;
+    width: 100px;
+    height: 100px;
 
     object-fit: contain;
 
     display: block;
 
     margin: 0 auto 5px;
-
 }
 
 
+/* Nome do SPA */
 .logo-area h1 {
 
     margin: 0;
@@ -128,13 +135,14 @@ nav {
     font-size: 17px;
 
     color: var(--primaria-escura);
-
 }
 
 
-/* =========================
+/* ==================================================
    BOTÕES DO MENU
-========================= */
+   ================================================== */
+
+
 
 .menu {
 
@@ -160,64 +168,76 @@ nav {
 
     text-align: left;
 
+    /* Tira o sublinhado do link */
+    text-decoration: none;
+
+    /* Mostra a mão */
     cursor: pointer;
 
     transition: 0.3s;
-
 }
 
+
+/* ==================================================
+   ÍCONES DO MENU
+   ================================================== */
 
 .menu i {
 
     font-size: 21px;
 
     color: var(--icone);
-
 }
 
 
-/* PASSAR O MOUSE */
+/* ==================================================
+   EFEITO QUANDO PASSA O MOUSE
+   ================================================== */
 
 .menu:hover {
 
     background-color: var(--primaria);
 
     color: var(--branco);
-
 }
 
 
+/* Muda a cor do ícone */
 .menu:hover i {
 
     color: var(--branco);
-
 }
 
 
-/* MENU ATIVO */
+/* ==================================================
+   BOTÃO ATIVO
+   ================================================== */
+
+/*
+   O Dashboard começa ativo.
+*/
 
 .menu.ativo {
 
     background-color: var(--primaria);
 
     color: var(--branco);
-
 }
 
 
 .menu.ativo i {
 
     color: var(--branco);
-
 }
 
 
-/* =========================
+/* ==================================================
    BOTÃO SAIR
-========================= */
+   ================================================== */
 
 .sair {
 
+    /* Coloca o botão no final do menu */
     position: absolute;
 
     bottom: 15px;
@@ -227,49 +247,49 @@ nav {
     width: calc(100% - 30px);
 
     color: var(--erro);
-
 }
 
 
 .sair i {
 
     color: var(--erro);
-
 }
 
 
+/* Quando passar o mouse em Sair */
 .sair:hover {
 
     background-color: var(--erro);
 
     color: var(--branco);
-
 }
 
 
 .sair:hover i {
 
     color: var(--branco);
-
 }
 
 
-/* =========================
+/* ==================================================
    ÁREA PRINCIPAL
-========================= */
+   ================================================== */
 
 main {
+
+    /*
+     espaço para o menu lateral.
+    */
 
     margin-left: 230px;
 
     padding: 25px;
-
 }
 
 
-/* =========================
+/* ==================================================
    CABEÇALHO
-========================= */
+   ================================================== */
 
 .cabecalho {
 
@@ -288,23 +308,21 @@ main {
     border-radius: var(--raio-medio);
 
     box-shadow: var(--sombra-card);
-
 }
 
 
-/* TÍTULO */
-
+/* Título Dashboard */
 .titulo h2 {
 
     margin: 0;
 
     font-size: 25px;
 
-    color: var(--primaria-escura);
-
+    color: var(--texto);
 }
 
 
+/* Texto abaixo do título */
 .titulo p {
 
     margin: 5px 0 0;
@@ -312,13 +330,12 @@ main {
     color: var(--texto-secundario);
 
     font-size: 14px;
-
 }
 
 
-/* =========================
+/* ==================================================
    USUÁRIO
-========================= */
+   ================================================== */
 
 .usuario {
 
@@ -327,28 +344,28 @@ main {
     align-items: center;
 
     gap: 10px;
-
 }
 
 
+/* Ícone do usuário */
 .usuario > i {
 
     font-size: 40px;
 
     color: var(--primaria);
-
 }
 
 
+/* Nome */
 .usuario strong {
 
     display: block;
 
     font-size: 14px;
-
 }
 
 
+/* Texto Bem-vinda */
 .usuario span {
 
     display: block;
@@ -358,13 +375,12 @@ main {
     font-size: 12px;
 
     color: var(--texto-secundario);
-
 }
 
 
-/* =========================
+/* ==================================================
    BANNER
-========================= */
+   ================================================== */
 
 .banner {
 
@@ -389,19 +405,17 @@ main {
     box-shadow: var(--sombra-card);
 
     overflow: hidden;
-
 }
 
 
-/* TEXTO */
-
+/* Texto do banner */
 .texto-banner {
 
     width: 50%;
-
 }
 
 
+/* Título do banner */
 .texto-banner h2 {
 
     margin: 0 0 10px;
@@ -409,10 +423,10 @@ main {
     font-size: 34px;
 
     color: var(--primaria-escura);
-
 }
 
 
+/* Texto do banner */
 .texto-banner p {
 
     margin: 0;
@@ -424,30 +438,12 @@ main {
     font-size: 17px;
 
     line-height: 1.6;
-
 }
 
 
-/* =========================
-   IMAGEM DO SPA
-========================= */
-
-.imagem-spa {
-
-    width: 45%;
-
-    height: 230px;
-
-    object-fit: cover;
-
-    border-radius: var(--raio-grande);
-
-}
-
-
-/* =========================
+/* ==================================================
    BOTÃO AGENDAR
-========================= */
+   ================================================== */
 
 .botao-agendar {
 
@@ -455,7 +451,7 @@ main {
 
     padding: 12px 18px;
 
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
@@ -473,36 +469,50 @@ main {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    text-decoration: none;
 
+    transition: 0.3s;
 }
 
 
+/* Efeito do botão */
 .botao-agendar:hover {
 
     background-color: var(--primaria-escura);
-
 }
 
 
-/* =========================
+/* ==================================================
+   IMAGEM DO SPA
+   ================================================== */
+
+.imagem-spa {
+
+    width: 45%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    border-radius: var(--raio-grande);
+}
+
+
+/* ==================================================
    CARDS
-========================= */
+   ================================================== */
 
 .cards {
 
     display: grid;
 
-    grid-template-columns:
-        repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 20px;
-
 }
 
 
-/* CARD */
-
+/* Cada card */
 .card {
 
     display: flex;
@@ -520,18 +530,19 @@ main {
     box-shadow: var(--sombra-card);
 
     transition: 0.3s;
-
 }
 
 
+/* Efeito quando passa o mouse */
 .card:hover {
 
     transform: translateY(-3px);
-
 }
 
 
-/* ÍCONE DO CARD */
+/* ==================================================
+   ÍCONE DOS CARDS
+   ================================================== */
 
 .icone-card {
 
@@ -548,7 +559,6 @@ main {
     border-radius: var(--raio-medio);
 
     background-color: var(--bege-claro);
-
 }
 
 
@@ -557,11 +567,12 @@ main {
     font-size: 25px;
 
     color: var(--icone);
-
 }
 
 
-/* TEXTO DO CARD */
+/* ==================================================
+   TEXTO DOS CARDS
+   ================================================== */
 
 .card h3 {
 
@@ -570,7 +581,6 @@ main {
     font-size: 14px;
 
     color: var(--texto-secundario);
-
 }
 
 
@@ -579,7 +589,6 @@ main {
     font-size: 23px;
 
     color: var(--primaria-escura);
-
 }
 
 
@@ -590,38 +599,34 @@ main {
     font-size: 12px;
 
     color: var(--texto-claro);
-
 }
 
 
-/* =========================
+/* ==================================================
    RESPONSIVIDADE
-========================= */
+   ================================================== */
 
+/* Tablet */
 @media (max-width: 900px) {
 
     nav {
 
         width: 190px;
-
     }
 
     main {
 
         margin-left: 190px;
-
     }
 
     .cards {
 
-        grid-template-columns:
-            repeat(2, 1fr);
-
+        grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
 
+/* Celular */
 @media (max-width: 650px) {
 
     nav {
@@ -629,7 +634,6 @@ main {
         width: 70px;
 
         padding: 15px 10px;
-
     }
 
 
@@ -638,21 +642,18 @@ main {
         width: 45px;
 
         height: 45px;
-
     }
 
 
     .logo-area h1 {
 
         display: none;
-
     }
 
 
     .menu span {
 
         display: none;
-
     }
 
 
@@ -661,7 +662,6 @@ main {
         justify-content: center;
 
         padding: 12px;
-
     }
 
 
@@ -670,14 +670,12 @@ main {
         margin-left: 70px;
 
         padding: 15px;
-
     }
 
 
     .cabecalho {
 
         padding: 15px;
-
     }
 
 
@@ -686,14 +684,12 @@ main {
         flex-direction: column;
 
         align-items: flex-start;
-
     }
 
 
     .texto-banner {
 
         width: 100%;
-
     }
 
 
@@ -702,15 +698,11 @@ main {
         width: 100%;
 
         height: 200px;
-
     }
 
 
     .cards {
 
         grid-template-columns: 1fr;
-
     }
-
 }
-

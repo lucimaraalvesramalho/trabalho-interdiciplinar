@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 import mysql.connector
 from dotenv import load_dotenv
 import os
@@ -20,6 +20,7 @@ db_config = {
 # Função que faz a conexão com o MySQL
 def get_db_connection():
     return mysql.connector.connect(**db_config)
+    
 
 
 # ==========================================================
