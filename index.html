@@ -1,253 +1,271 @@
 ```html
 <!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SPA Bem Estar</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Ícones Phosphor -->
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flor de Lotus SPA</title>
+    <link rel="stylesheet" href="style.css" />
     <link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    >
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+  </head>
+  <body>
+    <nav class="menu-lateral">
+      <div class="area-logo">
+        <img src="logo.png" alt="Logo Flor de Lotus" class="logo" />
+        <h1>Flor de Lotus SPA</h1>
+      </div>
 
-</head>
+      <button class="menu ativo" data-secao="dashboard">
+        <i class="ph ph-house"></i>
+        <span>Dashboard</span>
+      </button>
+      <button class="menu" data-secao="agendamentos">
+        <i class="ph ph-calendar"></i>
+        <span>Agendamentos</span>
+      </button>
+      <button class="menu" data-secao="clientes">
+        <i class="ph ph-users"></i>
+        <span>Clientes</span>
+      </button>
+      <button class="menu" data-secao="servicos">
+        <i class="ph ph-sparkle"></i>
+        <span>Serviços</span>
+      </button>
+      <button class="menu" data-secao="produtos">
+        <i class="ph ph-package"></i>
+        <span>Produtos</span>
+      </button>
+      <button class="menu" data-secao="pagamentos">
+        <i class="ph ph-money"></i>
+        <span>Pagamentos</span>
+      </button>
 
-<body>
-
-    <!-- =========================
-         MENU LATERAL
-    ========================== -->
-
-    <nav>
-
-        <!-- LOGO -->
-        <div class="logo-area">
-
-            <img
-                src="logo.png"
-                alt="Logo SPA Bem Estar"
-                class="logo"
-            >
-
-            <h1> Flor de Lotus SPA</h1>
-
-        </div>
-
-
-        <!-- MENU -->
-
-        <button class="menu ativo">
-            <i class="ph ph-house"></i>
-            <span>Dashboard</span>
-        </button>
-
-
-        <button class="menu">
-            <i class="ph ph-calendar"></i>
-            <span>Agendamentos</span>
-        </button>
-
-
-        <button class="menu">
-            <i class="ph ph-users"></i>
-            <span>Clientes</span>
-        </button>
-
-
-        <button class="menu">
-            <i class="ph ph-package"></i>
-            <span>Produtos</span>
-        </button>
-
-
-        <button class="menu">
-            <i class="ph ph-user"></i>
-            <span>Funcionários</span>
-        </button>
-
-
-        <button class="menu">
-            <i class="ph ph-money"></i>
-            <span>Pagamentos</span>
-        </button>
-
-
-        <!-- SAIR -->
-
-        <button class="menu sair">
-            <i class="ph ph-sign-out"></i>
-            <span>Sair</span>
-        </button>
-
+      <button class="menu sair">
+        <i class="ph ph-sign-out"></i>
+        <span>Sair</span>
+      </button>
     </nav>
 
-
-    <!-- =========================
-         PAGINA PRINCIPAL
-    ========================== -->
-
-    <main>
-
-
-        <!-- CABEÇALHO -->
-
-        <header class="cabecalho">
-
-            <div class="titulo">
-
-                <h2>Dashboard</h2>
-
-                <p>
-                    Bem-vinda ao SPA Flor de Lotus, onde o cuidado e a qualidade se encontram para proporcionar uma experiência única de bem-estar.
-                </p>
-
-            </div>
-
-
-            <!-- USUÁRIO -->
-
-            <div class="usuario">
-
-                <i class="ph ph-user-circle"></i>
-
-                <div>
-
-                    <strong>Administrador</strong>
-
-                    <span>Bem-vinda!</span>
-
-                </div>
-
-            </div>
-
-        </header>
-
-
-        <!-- =========================
-             BANNER
-        ========================== -->
-
-        <section class="banner">
-
-
-            <div class="texto-banner">
-
-                <h2>
-                    Flor Lotus SPA
-                </h2>
-
-                <p>
-                    Cuidado e qualidade em cada atendimento.
-                </p>
-
-
-                <button class="botao-agendar">
-
-                    <i class="ph ph-calendar-plus"></i>
-
-                    Agendar atendimento
-
-                </button>
-
-            </div>
-
-
-            <!-- IMAGEM -->
-
-            <img
-                src="spa.png"
-                alt="Ambiente relaxante do SPA"
-                class="imagem-spa"
-            >
-
-        </section>
-
-
-        <!-- =========================
-             CARDS
-        ========================== -->
-
-        <section class="cards">
-
-
-            <!-- AGENDAMENTOS -->
-
-            <div class="card">
-
-                <div class="icone-card">
-                    <i class="ph ph-calendar"></i>
-                </div>
-
-                <div>
-
-                    <h3>Agendamentos</h3>
-
-                    <strong>12</strong>
-
-                    <p>Hoje</p>
-
-                </div>
-
-            </div>
-
-
-            <!-- CLIENTES -->
-
-            <div class="card">
-
-                <div class="icone-card">
-                    <i class="ph ph-users"></i>
-                </div>
-
-                <div>
-
-                    <h3>Clientes</h3>
-
-                    <strong>48</strong>
-
-                    <p>Cadastrados</p>
-
-                </div>
-
-            </div>
-
-
-            <!-- SERVIÇOS -->
-
-            <div class="card">
-
-                <div class="icone-card">
-                    <i class="ph ph-sparkle"></i>
-                </div>
-
-                <div>
-
-                    <h3>Serviços</h3>
-
-                    <strong>15</strong>
-
-                    <p>Disponíveis</p>
-
-                </div>
-
-            </div>
-
-
-            <!-- PAGAMENTOS -->
-
-            <div class="card">
-
-                <div class="icone-card">
-                    <i class="ph ph-money"></i>
+    <main class="conteudo-principal">
+      <header class="cabecalho">
+        <div class="titulo-principal">
+          <h2 id="titulo-pagina">Dashboard</h2>
+          <p>
+            Bem-vindo ao spa, onde o equilíbrio, o cuidado e a qualidade se encontram em cada atendimento.
+          </p>
+        </div>
+
+        <div class="usuario">
+          <i class="ph ph-user-circle"></i>
+          <div>
+            <strong>Administrador</strong>
+            <span>Bem-vindo!</span>
+          </div>
+        </div>
+      </header>
+
+      <section class="banner" data-secao-conteudo="dashboard">
+        <div class="texto-banner">
+          <h2>Flor de Lotus SPA</h2>
+          <p>Cuidado e qualidade em cada visita.</p>
+          <button class="botao-principal" data-secao="agendamentos">
+            <i class="ph ph-calendar-plus"></i>
+            Agendar atendimento
+          </button>
+        </div>
+
+        <img src="spa.png" alt="Ambiente relaxante do spa" class="imagem-spa" />
+      </section>
+
+      <section class="painel painel-secao" data-secao-conteudo="dashboard">
+        <div id="resumo-dashboard" class="cards"></div>
+      </section>
+
+      <section class="painel painel-secao oculto" data-secao-conteudo="clientes">
+        <div class="cabecalho-painel">
+          <h3>Clientes</h3>
+          <button class="botao-principal pequeno" id="botao-novo-cliente">Novo cliente</button>
+        </div>
+
+        <form id="formulario-cliente" class="formulario oculto" data-tipo="cliente" data-chave-id="id_cliente">
+          <input type="hidden" name="id_cliente" value="" />
+          <div class="grupo-campo">
+            <label for="nome-cliente">Nome</label>
+            <input id="nome-cliente" name="nome" type="text" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="telefone-cliente">Telefone</label>
+            <input id="telefone-cliente" name="telefone" type="text" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="email-cliente">Email</label>
+            <input id="email-cliente" name="email" type="email" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="endereco-cliente">Endereço</label>
+            <input id="endereco-cliente" name="endereco" type="text" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="consentimento-cliente">Consentimento LGPD</label>
+            <select id="consentimento-cliente" name="aceitou_lgpd">
+              <option value="sim">Sim</option>
+              <option value="não">Não</option>
+            </select>
+          </div>
+          <div class="grupo-campo">
+            <label for="data-consentimento-cliente">Data do consentimento</label>
+            <input id="data-consentimento-cliente" name="data_consentimento" type="date" required />
+          </div>
+          <button type="submit" class="botao-principal pequeno">Salvar cliente</button>
+        </form>
+
+        <div id="lista-clientes" class="lista-itens"></div>
+      </section>
+
+      <section class="painel painel-secao oculto" data-secao-conteudo="servicos">
+        <div class="cabecalho-painel">
+          <h3>Serviços</h3>
+          <button class="botao-principal pequeno" id="botao-novo-servico">Novo serviço</button>
+        </div>
+
+        <form id="formulario-servico" class="formulario oculto" data-tipo="servico" data-chave-id="id_servico">
+          <input type="hidden" name="id_servico" value="" />
+          <div class="grupo-campo">
+            <label for="nome-servico">Nome</label>
+            <input id="nome-servico" name="nome" type="text" required />
+          </div>
+          <div class="grupo-campo campo-longo">
+            <label for="descricao-servico">Descrição</label>
+            <input id="descricao-servico" name="descricao" type="text" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="valor-servico">Valor</label>
+            <input id="valor-servico" name="valor" type="number" step="0.01" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="duracao-servico">Duração em minutos</label>
+            <input id="duracao-servico" name="duracao" type="number" required />
+          </div>
+          <button type="submit" class="botao-principal pequeno">Salvar serviço</button>
+        </form>
+
+        <div id="lista-servicos" class="lista-itens"></div>
+      </section>
+
+      <section class="painel painel-secao oculto" data-secao-conteudo="agendamentos">
+        <div class="cabecalho-painel">
+          <h3>Agendamentos</h3>
+          <button class="botao-principal pequeno" id="botao-novo-agendamento">Novo agendamento</button>
+        </div>
+
+        <form id="formulario-agendamento" class="formulario oculto" data-tipo="agendamento" data-chave-id="id_agendamento">
+          <input type="hidden" name="id_agendamento" value="" />
+          <div class="grupo-campo">
+            <label for="cliente-agendamento">Cliente</label>
+            <input id="cliente-agendamento" name="id_cliente" type="number" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="funcionario-agendamento">Funcionário</label>
+            <input id="funcionario-agendamento" name="id_funcionario" type="number" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="servico-agendamento">Serviço</label>
+            <input id="servico-agendamento" name="id_servico" type="number" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="data-agendamento">Data</label>
+            <input id="data-agendamento" name="data" type="date" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="hora-agendamento">Hora</label>
+            <input id="hora-agendamento" name="hora" type="time" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="status-agendamento">Status</label>
+            <select id="status-agendamento" name="status">
+              <option value="Agendado">Agendado</option>
+              <option value="Confirmado">Confirmado</option>
+              <option value="Pendente">Pendente</option>
+            </select>
+          </div>
+          <button type="submit" class="botao-principal pequeno">Salvar agendamento</button>
+        </form>
+
+        <div id="lista-agendamentos" class="lista-itens"></div>
+      </section>
+
+      <section class="painel painel-secao oculto" data-secao-conteudo="produtos">
+        <div class="cabecalho-painel">
+          <h3>Produtos</h3>
+          <button class="botao-principal pequeno" id="botao-novo-produto">Novo produto</button>
+        </div>
+
+        <form id="formulario-produto" class="formulario oculto" data-tipo="produto" data-chave-id="id_produto">
+          <input type="hidden" name="id_produto" value="" />
+          <div class="grupo-campo">
+            <label for="nome-produto">Nome</label>
+            <input id="nome-produto" name="nome" type="text" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="categoria-produto">Categoria</label>
+            <input id="categoria-produto" name="categoria" type="text" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="quantidade-produto">Quantidade</label>
+            <input id="quantidade-produto" name="quantidade" type="number" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="preco-produto">Preço</label>
+            <input id="preco-produto" name="preco" type="number" step="0.01" required />
+          </div>
+          <button type="submit" class="botao-principal pequeno">Salvar produto</button>
+        </form>
+
+        <div id="lista-produtos" class="lista-itens"></div>
+      </section>
+
+      <section class="painel painel-secao oculto" data-secao-conteudo="pagamentos">
+        <div class="cabecalho-painel">
+          <h3>Pagamentos</h3>
+          <button class="botao-principal pequeno" id="botao-novo-pagamento">Novo pagamento</button>
+        </div>
+
+        <form id="formulario-pagamento" class="formulario oculto" data-tipo="pagamento" data-chave-id="id_pagamento">
+          <input type="hidden" name="id_pagamento" value="" />
+          <div class="grupo-campo">
+            <label for="agendamento-pagamento">ID do agendamento</label>
+            <input id="agendamento-pagamento" name="id_agendamento" type="number" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="valor-pagamento">Valor</label>
+            <input id="valor-pagamento" name="valor" type="number" step="0.01" required />
+          </div>
+          <div class="grupo-campo">
+            <label for="forma-pagamento">Forma de pagamento</label>
+            <select id="forma-pagamento" name="forma_pagamento">
+              <option value="Pix">Pix</option>
+              <option value="Cartão">Cartão</option>
+              <option value="Dinheiro">Dinheiro</option>
+              <option value="Transferência">Transferência</option>
+            </select>
+          </div>
+          <div class="grupo-campo">
+            <label for="data-pagamento">Data do pagamento</label>
+            <input id="data-pagamento" name="data_pagamento" type="date" required />
+          </div>
+          <button type="submit" class="botao-principal pequeno">Salvar pagamento</button>
+        </form>
+
+        <div id="lista-pagamentos" class="lista-itens"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
                 </div>
 
                 <div>

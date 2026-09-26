@@ -1,253 +1,441 @@
 
-/* ==================================================
-   VARIÁVEIS DO SISTEMA
-   ================================================== */
-
 :root {
-
-    /* CORES PRINCIPAIS */
-    --primaria: #B86F6B;
-    --primaria-escura: #9E5A57;
-    --primaria-clara: #d3a09b;
-
-    /* CORES DE FUNDO */
-    --fundo: #c4928e;
-    --branco: #FFFFFF;
-    --bege-claro: #f7eee9;
-
-    /* CORES DOS TEXTOS */
-    --texto: #3D3532;
-    --texto-secundario: #756B67;
-    --texto-claro: #9A8E89;
-
-    /* CORES DAS BORDAS */
-    --borda: #E7DDD8;
-    --borda-clara: #EFE7E3;
-
-    /* CORES DE STATUS */
-    --sucesso: #8FAF8B;
-    --aviso: #D9A56B;
-    --erro: #B86F6B;
-
-    /* COR DOS ÍCONES */
-    --icone: #A87569;
-
-    /* SOMBRA */
-    --sombra: rgba(120, 90, 80, 0.10);
-
-    /* ARREDONDAMENTO */
-    --raio-pequeno: 6px;
-    --raio-medio: 10px;
-    --raio-grande: 16px;
-
-    /* SOMBRA DOS CARDS */
-    --sombra-card: 0 2px 10px var(--sombra);
+    --primaria: #b86f6b;
+    --primaria-escura: #8f5250;
+    --primaria-clara: #f7e4e2;
+    --fundo: #f2dfdc;
+    --fundo-escuro: #e8cbc7;
+    --branco: #ffffff;
+    --bege-claro: #fffaf8;
+    --texto: #533f3b;
+    --texto-secundario: #7d6661;
+    --texto-suave: #8a6d68;
+    --borda: #efdcd8;
+    --sucesso: #7aa68a;
+    --aviso: #d7b06a;
+    --erro: #cc6b6b;
+    --sombra: rgba(109, 74, 66, 0.14);
+    --raio-pequeno: 10px;
+    --raio-medio: 16px;
+    --raio-grande: 20px;
 }
 
-
-/* ==================================================
-   CONFIGURAÇÃO GERAL
-   ================================================== */
-
-/* Faz o tamanho dos elementos ficar mais fácil de controlar */
 * {
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-/* Corpo da página */
 body {
-
     margin: 0;
     padding: 0;
-
-    width: 100%;
-    min-height: 100vh;
-
     font-family: Arial, sans-serif;
-
-    background-color: var(--fundo);
-
+    background: linear-gradient(180deg, var(--fundo) 0%, var(--fundo-escuro) 100%);
     color: var(--texto);
+    font-size: 16px;
+    line-height: 1.5;
 }
 
+button,
+input,
+select {
+    font: inherit;
+}
 
-/* ==================================================
-   MENU LATERAL
-   ================================================== */
-
-nav {
-
-    /* Fixa o menu na tela */
+.menu-lateral {
     position: fixed;
-
     left: 0;
     top: 0;
-
-    width: 230px;
-    height: 100vh;
-
-    padding: 20px 15px;
-
-    /* Coloca os itens um embaixo do outro */
+    width: 240px;
+    min-height: 100vh;
+    padding: 22px 16px 20px;
     display: flex;
     flex-direction: column;
-
     gap: 8px;
-
-    background-color: var(--bege-claro);
-
-    box-shadow: var(--sombra-card);
+    background: var(--bege-claro);
+    box-shadow: 0 8px 24px var(--sombra);
 }
 
-
-/* ==================================================
-   LOGO
-   ================================================== */
-
-.logo-area {
-
-    text-align: center;
-
-    margin-bottom: 20px;
+.area-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
 }
 
-
-/* Imagem da logo */
 .logo {
-
-    width: 100px;
-    height: 100px;
-
+    width: 90px;
+    height: 90px;
     object-fit: contain;
-
-    display: block;
-
-    margin: 0 auto 5px;
 }
 
-
-/* Nome do SPA */
-.logo-area h1 {
-
+.area-logo h1 {
     margin: 0;
+    font-size: 1.1rem;
+    color: var(--primaria-escura);
+    text-align: center;
+}
 
-    font-size: 17px;
+.menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 14px;
+    border: none;
+    border-radius: var(--raio-pequeno);
+    background: transparent;
+    color: var(--texto);
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
 
+.menu i {
+    font-size: 1.4rem;
     color: var(--primaria-escura);
 }
 
-
-/* ==================================================
-   BOTÕES DO MENU
-   ================================================== */
-
-
-
-.menu {
-
-    width: 100%;
-
-    padding: 12px 15px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 12px;
-
-    border: none;
-
-    border-radius: var(--raio-medio);
-
-    background-color: transparent;
-
-    color: var(--texto);
-
-    font-size: 15px;
-
-    text-align: left;
-
-    /* Tira o sublinhado do link */
-    text-decoration: none;
-
-    /* Mostra a mão */
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-
-/* ==================================================
-   ÍCONES DO MENU
-   ================================================== */
-
-.menu i {
-
-    font-size: 21px;
-
-    color: var(--icone);
-}
-
-
-/* ==================================================
-   EFEITO QUANDO PASSA O MOUSE
-   ================================================== */
-
-.menu:hover {
-
-    background-color: var(--primaria);
-
-    color: var(--branco);
-}
-
-
-/* Muda a cor do ícone */
-.menu:hover i {
-
-    color: var(--branco);
-}
-
-
-/* ==================================================
-   BOTÃO ATIVO
-   ================================================== */
-
-/*
-   O Dashboard começa ativo.
-*/
-
+.menu:hover,
 .menu.ativo {
-
-    background-color: var(--primaria);
-
+    background: var(--primaria);
     color: var(--branco);
 }
 
-
+.menu:hover i,
 .menu.ativo i {
-
     color: var(--branco);
 }
-
-
-/* ==================================================
-   BOTÃO SAIR
-   ================================================== */
 
 .sair {
-
-    /* Coloca o botão no final do menu */
-    position: absolute;
-
-    bottom: 15px;
-
-    left: 15px;
-
-    width: calc(100% - 30px);
-
+    margin-top: auto;
     color: var(--erro);
 }
+
+.sair i {
+    color: var(--erro);
+}
+
+.conteudo-principal {
+    margin-left: 240px;
+    padding: 30px 36px 42px;
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.titulo-principal {
+    max-width: 700px;
+}
+
+.titulo-principal h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.8rem, 2.4vw, 2.5rem);
+    letter-spacing: -0.03em;
+}
+
+.titulo-principal p {
+    margin: 0;
+    color: var(--texto-secundario);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--borda);
+    padding: 12px 18px;
+    border-radius: var(--raio-medio);
+    box-shadow: 0 6px 22px var(--sombra);
+}
+
+.usuario i {
+    font-size: 2.2rem;
+    color: var(--primaria-escura);
+}
+
+.usuario strong,
+.usuario span {
+    display: block;
+}
+
+.usuario span {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    padding: 28px 34px;
+    margin-bottom: 26px;
+    background: linear-gradient(135deg, var(--primaria) 0%, #d79b93 100%);
+    border-radius: var(--raio-grande);
+    box-shadow: 0 18px 30px rgba(184, 111, 107, 0.22);
+    color: var(--branco);
+}
+
+.texto-banner {
+    max-width: 480px;
+}
+
+.texto-banner h2 {
+    margin: 0 0 12px;
+    font-size: 2.2rem;
+}
+
+.texto-banner p {
+    margin: 0 0 18px;
+    font-size: 1.05rem;
+}
+
+.imagem-spa {
+    width: min(32vw, 280px);
+    max-width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 18px 32px rgba(83, 63, 59, 0.25);
+}
+
+.botao-principal {
+    background: var(--branco);
+    color: var(--primaria-escura);
+    border: none;
+    border-radius: 999px;
+    padding: 12px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.botao-principal.pequeno {
+    padding: 10px 14px;
+    font-size: 0.92rem;
+}
+
+.botao-principal:hover {
+    transform: translateY(-1px);
+}
+
+.painel {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-grande);
+    padding: 22px;
+    box-shadow: 0 12px 28px var(--sombra);
+}
+
+.painel-secao {
+    margin-top: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--branco);
+    border-radius: var(--raio-medio);
+    border: 1px solid var(--borda);
+    padding: 18px;
+}
+
+.icone-card {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: var(--primaria-clara);
+    color: var(--primaria-escura);
+    font-size: 1.6rem;
+}
+
+.card h3 {
+    margin: 0 0 6px;
+    font-size: 0.92rem;
+    color: var(--texto-secundario);
+    letter-spacing: 0.02em;
+}
+
+.card strong {
+    display: block;
+    font-size: clamp(1.5rem, 2vw, 1.9rem);
+    margin-bottom: 5px;
+    color: var(--texto);
+}
+
+.card p {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.88rem;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.cabecalho-painel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.cabecalho-painel h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--texto);
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+    padding: 20px 18px;
+    border-radius: var(--raio-medio);
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid var(--borda);
+    box-shadow: 0 12px 24px rgba(109, 74, 66, 0.05);
+}
+
+.grupo-campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grupo-campo label {
+    color: var(--texto-secundario);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.grupo-campo input,
+.grupo-campo select {
+    border: 1px solid var(--borda);
+    background: var(--branco);
+    border-radius: 12px;
+    padding: 10px 12px;
+    color: var(--texto);
+    min-height: 44px;
+}
+
+.campo-longo {
+    grid-column: span 2;
+}
+
+.lista-itens {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.item {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio-medio);
+    padding: 16px;
+}
+
+.item h4 {
+    margin: 0 0 10px;
+    font-size: 1.08rem;
+    color: var(--texto);
+}
+
+.item p {
+    margin: 6px 0;
+    color: var(--texto-secundario);
+    font-size: 0.95rem;
+}
+
+.item .acoes {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.botao-secundario {
+    border: none;
+    background: var(--primaria-clara);
+    color: var(--primaria-escura);
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.botao-perigo {
+    border: none;
+    background: rgba(204, 107, 107, 0.12);
+    color: var(--erro);
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.mensagem-vazia {
+    margin: 8px 0 0;
+    color: var(--texto-suave);
+    font-size: 0.94rem;
+}
+
+.painel-interno {
+    margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+    .menu-lateral {
+        width: 100%;
+        min-height: auto;
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 14px;
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+        padding: 20px 16px 30px;
+    }
+
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .imagem-spa {
+        width: 100%;
+    }
+}
+
 
 
 .sair i {
